@@ -1,0 +1,8 @@
+ <%# si lettre n'est pas dans le original grid %>
+<% if @included == false %>
+  <%= "Sorry but #{params[:word]} can't be built of #{params[:letters]}" %>
+<% elsif @english_word == false %>
+    <%= "Sorry but #{params[:word]} is not an english word" %>
+<% else %>
+    <%= "congratulation! #{@given_word} is an english word" %>
+<% end %>
